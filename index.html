@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DFFDY</title>
+    <link rel="icon" href="images/web-icon.png" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/header-nav.css" />
+    <link rel="stylesheet" href="css/login-signup.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <!-- 從這裡開始引入css檔 -->
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- header & nav -->
+    <header>
+      <nav
+        class="navbar fixed-top navbar-expand-lg navbar-light"
+        style="background-color: #94b2ca"
+      >
+        <div class="container-fluid">
+          <!-- 店家名稱 -->
+          <a class="navbar-brand logo" href="index.html"><span>DFFDY</span></a>
+          <!-- 側邊選單按鈕 -->
+          <button
+            class="navbar-toggler shadow-inset"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- 選單 -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  所有商品
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="allproducts.html"
+                      >所有商品
+                    </a>
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="bouquet.html">花束 </a>
+                  </li>
+
+                  <li>
+                    <a class="dropdown-item" href="glass.html">玻璃瓶</a>
+                  </li>
+
+                  <li>
+                    <a class="dropdown-item" href="card.html">卡片</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="aboutus.html"
+                  >關於我們</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="faq.html">常見問題 </a>
+              </li>
+
+              <li class="nav-item home-icon">
+                <a class="nav-link" aria-current="page" href="index.html"
+                  ><i class="fa-sharp fa-solid fa-house"></i
+                ></a>
+              </li>
+              <li class="nav-item shopping-cart-icon">
+                <a class="nav-link" aria-current="page" href="cart.html">
+                  <i class="fa-solid fa-cart-shopping"></i
+                ></a>
+              </li>
+              <li class="nav-item user-icon" id="user">
+                <div class="nav-link" aria-current="page">
+                  <i class="fa-solid fa-user"></i>
+                </div>
+              </li>
+              <!-- 登入或註冊 介面 -->
+              <div class="login-signup" id="login-signup">
+                <div class="content">
+                  <div class="login">
+                    <p>已經是會員</p>
+                    <button
+                      id="go-to-login"
+                      type="button"
+                      onclick="location.href='log-in.html'"
+                    >
+                      登入
+                    </button>
+                  </div>
+                  <div class="dividing-line"></div>
+                  <div class="signup">
+                    <p>還沒有帳號嗎？</p>
+                    <button
+                      id="go-to-signup"
+                      type="button"
+                      onclick="location.href='register.html'"
+                    >
+                      註冊
+                    </button>
+                  </div>
+                  <div class="signup">
+                    <span id="leave-login-signup"> 訪客模式 </span>
+                  </div>
+                </div>
+              </div>
+            </ul>
+            <!-- 搜尋欄 -->
+            <form class="d-flex" method="post" action="#">
+              <input
+                class="form-control me-2 shadow-none"
+                type="search"
+                placeholder=""
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-dark shadow-none" type="submit">
+                <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- 回頂端 -->
+    <div class="totop">
+      <a href="#top" class="totop" id="totop">
+        <button class="totop-button">
+          <img src="images/top.png" />
+        </button>
+      </a>
+    </div>
+    <!-- 主要內容 -->
+    <main class="container-fluid home-part">
+      <article>
+        <!-------------- 從這裡開始放各個版面的內容 ------------------------------------------------------------------------------->
+        <!-- Brand 品牌理念 -->
+        <section class="row brand-concept">
+          <div class="col-12 col-md-8 col-lg-7 col-xl-6 col-xxl-5 brand-text">
+            <!-- 不同大小的裝置適用於不同的背景圖 -->
+            <img
+              class="img-fluid brand-bg"
+              src="images/brand-concept/brand-bg.jpg"
+            />
+            <img
+              class="img-fluid brand-bg-2"
+              src="images/brand-concept/brand-bg-2.jpg"
+            />
+            <img
+              class="img-fluid brand-bg-3"
+              src="images/brand-concept/brand-bg-3.jpg"
+            />
+            <div class="content">
+              <p class="title">品牌理念</p>
+              <p class="slogan">Dried flowers for dear you.</p>
+              <p>
+                乾燥花和永生花比起鮮花更能留存得久，也能夠將最美好的回憶保存。在友情方面，珍惜朋友，無論發生什麼，友誼永遠不會變，望友誼能長存。在愛情方面，愛永不凋謝，不論遇到什麼困難，永遠不離不棄。在親情方面，不論身在何處，總有人等你回家，不論飛多遠，總有人牽掛，請記得背後還有個家能夠依靠。
+              </p>
+            </div>
+          </div>
+          <div
+            class="col-12 col-md-4 col-lg-5 col-xl-6 col-xxl-7 brand-picture"
+          ></div>
+        </section>
+        <!-- 熱銷商品 -->
+        <section class="container bestseller">
+          <div class="row">
+            <div class="title">熱銷商品</div>
+            <template>
+              <div class="col-12 col-sm-4 bestseller-item">
+                <!-- 商品連結 -->
+                <a href="product.html">
+                  <div class="hot-tab">
+                    Top
+                    <span class="top-number">1</span>
+                  </div>
+                  <!-- 商品圖片 -->
+                  <div class="picture">
+                    <img
+                      class="img-fluid"
+                      src="images/bouquet/yellow-tulip.jpg"
+                    />
+                  </div>
+                  <!-- 商品名稱 -->
+                  <div class="product-name">黃色鬱金香乾燥花束</div>
+
+                  <!-- 商品價格 -->
+                  <div class="product-price">NT$2,880</div>
+                </a>
+              </div>
+            </template>
+            <div class="col-12 col-sm-4 bestseller-item">
+              <!-- 商品連結 -->
+              <a href="product.html">
+                <div class="hot-tab">Top<span class="top-number">1</span></div>
+                <!-- 商品圖片 -->
+                <div class="picture">
+                  <img
+                    class="img-fluid"
+                    src="images/bouquet/yellow-tulip.jpg"
+                  />
+                </div>
+                <!-- 商品名稱 -->
+                <div class="product-name">黃色鬱金香乾燥花束</div>
+
+                <!-- 商品價格 -->
+                <div class="product-price">NT$2,880</div>
+              </a>
+            </div>
+            <div class="col-12 col-sm-4 bestseller-item">
+              <a href="product.html">
+                <div class="hot-tab">Top<span class="top-number">2</span></div>
+                <div class="picture">
+                  <img class="img-fluid" src="images/bouquet/white-rose.jpg" />
+                </div>
+                <div class="product-name">白玫瑰永生花束</div>
+                <div class="product-price">NT$3,880</div>
+              </a>
+            </div>
+            <div class="col-12 col-sm-4 bestseller-item">
+              <a href="product.html">
+                <div class="hot-tab">Top<span class="top-number">3</span></div>
+                <div class="picture">
+                  <img class="img-fluid" src="images/bouquet/black-rose.jpg" />
+                </div>
+
+                <div class="product-name">黑玫瑰永生花束</div>
+                <div class="product-price">NT$3,290</div>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!------------------ 各版面內容結束---------------------------------------------------------------------------------- -->
+      </article>
+      <!-- 如果頁面長度很短，可以讓footer固定在頁面底部 -->
+      <div class="sticky-footer"></div>
+    </main>
+    <!-- footer -->
+    <footer>
+      <div class="container-fluid footer">
+        <div class="row">
+          <div class="text-center">
+            <p>
+              版權所有 &copy; 2022 李欣樺 胡文欣 葉姿妤 沈芋廷 葉絮喬 蘇莉凱
+            </p>
+            <p>瀏覽人數： 3 人</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <!-- bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- icon -->
+    <script
+      src="https://kit.fontawesome.com/e2df7f4d73.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- to top -->
+    <script src="js/top.js"></script>
+
+    <!-- 登入或註冊 介面 -->
+    <script src="js/login-signup.js"></script>
+  </body>
+</html>

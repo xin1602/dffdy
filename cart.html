@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DFFDY</title>
+    <link rel="icon" href="images/web-icon.png" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/header-nav.css" />
+    <link rel="stylesheet" href="css/login-signup.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <!-- 從這裡開始引入css檔 -->
+    <link rel="stylesheet" href="css/cart.css" />
+    <link rel="stylesheet" href="css/personal-information-style.css" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- header & nav -->
+    <header>
+      <nav
+        class="navbar fixed-top navbar-expand-lg navbar-light"
+        style="background-color: #94b2ca"
+      >
+        <div class="container-fluid">
+          <!-- 店家名稱 -->
+          <a class="navbar-brand logo" href="index.html"><span>DFFDY</span></a>
+          <!-- 側邊選單按鈕 -->
+          <button
+            class="navbar-toggler shadow-inset"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- 選單 -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  所有商品
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="allproducts.html"
+                      >所有商品
+                    </a>
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="bouquet.html">花束 </a>
+                  </li>
+
+                  <li>
+                    <a class="dropdown-item" href="glass.html">玻璃瓶</a>
+                  </li>
+
+                  <li>
+                    <a class="dropdown-item" href="card.html">卡片</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="aboutus.html"
+                  >關於我們</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="faq.html">常見問題 </a>
+              </li>
+
+              <li class="nav-item home-icon">
+                <a class="nav-link" aria-current="page" href="index.html"
+                  ><i class="fa-sharp fa-solid fa-house"></i
+                ></a>
+              </li>
+              <li class="nav-item shopping-cart-icon">
+                <a class="nav-link" aria-current="page" href="cart.html">
+                  <i class="fa-solid fa-cart-shopping"></i
+                ></a>
+              </li>
+              <li class="nav-item user-icon" id="user">
+                <div class="nav-link" aria-current="page">
+                  <i class="fa-solid fa-user"></i>
+                </div>
+              </li>
+              <!-- 登入或註冊 介面 -->
+              <div class="login-signup" id="login-signup">
+                <div class="content">
+                  <div class="login">
+                    <p>已經是會員</p>
+                    <button
+                      id="go-to-login"
+                      type="button"
+                      onclick="location.href='log-in.html'"
+                    >
+                      登入
+                    </button>
+                  </div>
+                  <div class="dividing-line"></div>
+                  <div class="signup">
+                    <p>還沒有帳號嗎？</p>
+                    <button
+                      id="go-to-signup"
+                      type="button"
+                      onclick="location.href='register.html'"
+                    >
+                      註冊
+                    </button>
+                  </div>
+                  <div class="signup">
+                    <span id="leave-login-signup"> 訪客模式 </span>
+                  </div>
+                </div>
+              </div>
+            </ul>
+            <!-- 搜尋欄 -->
+            <form class="d-flex" method="post" action="#">
+              <input
+                class="form-control me-2 shadow-none"
+                type="search"
+                placeholder=""
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-dark shadow-none" type="submit">
+                <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- 回頂端 -->
+    <div class="totop">
+      <a href="#top" class="totop" id="totop">
+        <button class="totop-button">
+          <img src="images/top.png" />
+        </button>
+      </a>
+    </div>
+    <!-- 主要內容 -->
+    <main class="container-fluid">
+      <article>
+        <!-------------- 從這裡開始放各個版面的內容 ------------------------------------------------------------------------------->
+
+        <!-- 購物車是包含在會員中心的一小部分，把最初畫面停留在購物車的頁籤上 -->
+        <section class="container-fluid member-center">
+          <ul
+            class="nav nav-pills mb-3 justify-content-center"
+            id="pills-tab"
+            role="tablist"
+          >
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="pills-record-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-record"
+                type="button"
+                role="tab"
+                aria-controls="pills-record"
+                aria-selected="false"
+              >
+                訂單紀綠
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="pills-review-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-review"
+                type="button"
+                role="tab"
+                aria-controls="pills-review"
+                aria-selected="false"
+              >
+                評分與評論
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="pills-member-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-member"
+                type="button"
+                role="tab"
+                aria-controls="pills-member"
+                aria-selected="false"
+              >
+                會員資料
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link active"
+                id="pills-cart-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-cart"
+                type="button"
+                role="tab"
+                aria-controls="pills-cart"
+                aria-selected="true"
+              >
+                購物車
+              </button>
+            </li>
+          </ul>
+          <div class="tab-content" id="pills-tabContent">
+            <div
+              class="tab-pane fade"
+              id="pills-record"
+              role="tabpanel"
+              aria-labelledby="pills-record-tab"
+            >
+              <!-- 訂單紀錄 -->
+              <div class="buy-list">
+                <div class="title">訂單紀錄</div>
+                <form id="buy-list" method="post" action="#">
+                  <template>
+                    <div class="all-order">
+                      <div class="row titles">
+                        <!-- 訂單編號 -->
+                        <div class="col-12 col-md-6 col-xl-6 order-id">
+                          訂單編號：N1817632
+                        </div>
+                        <!-- 購買日期 -->
+                        <div class="col-12 col-md-4 col-xl-4 buy-date">
+                          購買日期：2022/01/04
+                        </div>
+                        <!-- 訂單狀態 -->
+                        <div class="col-12 col-md-2 col-xl-2 order-status">
+                          待出貨
+                        </div>
+                      </div>
+                      <!-- 商品資訊 -->
+                      <div class="row product">
+                        <!-- 商品圖 -->
+                        <div class="col-4 col-md-2 col-xl-2 image">
+                          <img
+                            src="images/bouquet/white-sunflower.jpg"
+                            alt=""
+                          />
+                        </div>
+                        <!-- 商品名稱 -->
+                        <div class="col-8 col-md-4 col-xl-4 text">
+                          白向日葵乾燥花束
+                        </div>
+                        <!-- 商品價格 -->
+                        <div class="col-12 col-md-2 col-xl-2 one-price">
+                          $1280
+                        </div>
+                        <!-- 數量 -->
+                        <div class="col-6 col-md-2 col-xl-2 amount">×1</div>
+                        <!-- 總計價格 -->
+                        <div class="col-6 col-md-2 col-xl-2 all-price">
+                          $1280
+                        </div>
+                      </div>
+                      <div class="row product">
+                        <div class="col-4 col-md-2 col-xl-2 image">
+                          <img src="images/glass/purple-rose.jpg" alt="" />
+                        </div>
+                        <div class="col-8 col-md-4 col-xl-4 text">
+                          紫玫瑰永生玻璃大花盅 小夜燈
+                        </div>
+                        <div class="col-12 col-md-2 col-xl-2 one-price">
+                          $1980
+                        </div>
+                        <div class="col-6 col-md-2 col-xl-2 amount">×1</div>
+                        <div class="col-6 col-md-2 col-xl-2 all-price">
+                          $1980
+                        </div>
+                      </div>
+                      <div class="row product">
+                        <div class="col-4 col-md-2 col-xl-2 image">
+                          <img src="images/card/pink-babybreath.jpg" alt="" />
+                        </div>
+                        <div class="col-8 col-md-4 col-xl-4 text">
+                          手作粉滿天星乾燥花卡片
+                        </div>
+                        <div class="col-12 col-md-2 col-xl-2 one-price">
+                          $150
+                        </div>
+                        <div class="col-6 col-md-2 col-xl-2 amount">×1</div>
+                        <div class="col-6 col-md-2 col-xl-2 all-price">
+                          $150
+                        </div>
+                      </div>
+                      <div class="row count">
+                        <div class="col-12 col-md-8 col-xl-8"></div>
+                        <!-- 合計 -->
+                        <div class="col-6 col-md-2 col-xl-2 total-price-text">
+                          合計
+                        </div>
+                        <!-- 合計金額 -->
+                        <div class="col-6 col-md-2 col-xl-2 total-price">
+                          $3410
+                        </div>
+                      </div>
+                    </div>
+                  </template>
+                  <div class="all-order">
+                    <div class="row titles">
+                      <!-- 訂單編號 -->
+                      <div class="col-12 col-md-6 col-xl-6 order-id">
+                        訂單編號：N1817632
+                      </div>
+                      <!-- 購買日期 -->
+                      <div class="col-12 col-md-4 col-xl-4 buy-date">
+                        購買日期：2022/01/04
+                      </div>
+                      <!-- 訂單狀態 -->
+                      <div class="col-12 col-md-2 col-xl-2 order-status">
+                        待出貨
+                      </div>
+                    </div>
+                    <!-- 商品資訊 -->
+                    <div class="row product">
+                      <!-- 商品圖 -->
+                      <div class="col-4 col-md-2 col-xl-2 image">
+                        <img src="images/bouquet/white-sunflower.jpg" alt="" />
+                      </div>
+                      <!-- 商品名稱 -->
+                      <div class="col-8 col-md-4 col-xl-4 text">
+                        白向日葵乾燥花束
+                      </div>
+                      <!-- 商品價格 -->
+                      <div class="col-12 col-md-2 col-xl-2 one-price">
+                        $1280
+                      </div>
+                      <!-- 數量 -->
+                      <div class="col-6 col-md-2 col-xl-2 amount">×1</div>
+                      <!-- 總計價格 -->
+                      <div class="col-6 col-md-2 col-xl-2 all-price">$1280</div>
+                    </div>
+                    <div class="row product">
+                      <div class="col-4 col-md-2 col-xl-2 image">
+                        <img src="images/glass/purple-rose.jpg" alt="" />
+                      </div>
+                      <div class="col-8 col-md-4 col-xl-4 text">
+                        紫玫瑰永生玻璃大花盅 小夜燈
+                      </div>
+                      <div class="col-12 col-md-2 col-xl-2 one-price">
+                        $1980
+                      </div>
+                      <div class="col-6 col-md-2 col-xl-2 amount">×1</div>
+                      <div class="col-6 col-md-2 col-xl-2 all-price">$1980</div>
+                    </div>
+                    <div class="row product">
+                      <div class="col-4 col-md-2 col-xl-2 image">
+                        <img src="images/card/pink-babybreath.jpg" alt="" />
+                      </div>
+                      <div class="col-8 col-md-4 col-xl-4 text">
+                        手作粉滿天星乾燥花卡片
+                      </div>
+                      <div class="col-12 col-md-2 col-xl-2 one-price">$150</div>
+                      <div class="col-6 col-md-2 col-xl-2 amount">×1</div>
+                      <div class="col-6 col-md-2 col-xl-2 all-price">$150</div>
+                    </div>
+                    <div class="row count">
+                      <div class="col-12 col-md-8 col-xl-8"></div>
+                      <!-- 合計 -->
+                      <div class="col-6 col-md-2 col-xl-2 total-price-text">
+                        合計
+                      </div>
+                      <!-- 合計金額 -->
+                      <div class="col-6 col-md-2 col-xl-2 total-price">
+                        $3410
+                      </div>
+                    </div>
+                  </div>
+                  <div class="all-order">
+                    <div class="row titles">
+                      <div class="col-12 col-md-6 col-xl-6 order-id">
+                        訂單編號：N1816157
+                      </div>
+                      <div class="col-12 col-md-4 col-xl-4 buy-date">
+                        購買日期：2022/01/03
+                      </div>
+                      <div class="col-12 col-md-2 col-xl-2 order-status">
+                        取消
+                      </div>
+                    </div>
+                    <div class="row product">
+                      <div class="col-4 col-md-2 col-xl-2 image">
+                        <img src="images/bouquet/white-sunflower.jpg" alt="" />
+                      </div>
+                      <div class="col-8 col-md-4 col-xl-4 text">
+                        白向日葵乾燥花束
+                      </div>
+                      <div class="col-12 col-md-2 col-xl-2 one-price">
+                        $1280
+                      </div>
+                      <div class="col-6 col-md-2 col-xl-2 amount">×1</div>
+                      <div class="col-6 col-md-2 col-xl-2 all-price">$1280</div>
+                    </div>
+                    <div class="row product">
+                      <div class="col-4 col-md-2 col-xl-2 image">
+                        <img src="images/glass/purple-rose.jpg" alt="" />
+                      </div>
+                      <div class="col-8 col-md-4 col-xl-4 text">
+                        紫玫瑰永生玻璃大花盅 小夜燈
+                      </div>
+                      <div class="col-12 col-md-2 col-xl-2 one-price">
+                        $1980
+                      </div>
+                      <div class="col-6 col-md-2 col-xl-2 amount">×1</div>
+                      <div class="col-6 col-md-2 col-xl-2 all-price">$1980</div>
+                    </div>
+                    <div class="row product">
+                      <div class="col-4 col-md-2 col-xl-2 image">
+                        <img src="images/card/pink-babybreath.jpg" alt="" />
+                      </div>
+                      <div class="col-8 col-md-4 col-xl-4 text">
+                        手作粉滿天星乾燥花卡片
+                      </div>
+                      <div class="col-12 col-md-2 col-xl-2 one-price">$150</div>
+                      <div class="col-6 col-md-2 col-xl-2 amount">×1</div>
+                      <div class="col-6 col-md-2 col-xl-2 all-price">$150</div>
+                    </div>
+                    <div class="row count">
+                      <div class="col-12 col-md-8 col-xl-8"></div>
+                      <div class="col-6 col-md-2 col-xl-2 total-price-text">
+                        合計
+                      </div>
+                      <div class="col-6 col-md-2 col-xl-2 total-price">
+                        $3410
+                      </div>
+                    </div>
+                  </div>
+                  <div class="all-order">
+                    <div class="row titles">
+                      <div class="col-12 col-md-6 col-xl-6 order-id">
+                        訂單編號：N1818915
+                      </div>
+                      <div class="col-12 col-md-4 col-xl-4 buy-date">
+                        購買日期：2022/12/10
+                      </div>
+                      <div class="col-12 col-md-2 col-xl-2 order-status">
+                        已完成
+                      </div>
+                    </div>
+                    <div class="row product">
+                      <div class="col-4 col-md-2 col-xl-2 image">
+                        <img src="images/bouquet/white-sunflower.jpg" alt="" />
+                      </div>
+                      <div class="col-8 col-md-4 col-xl-4 text">
+                        白向日葵乾燥花束
+                      </div>
+                      <div class="col-12 col-md-2 col-xl-2 one-price">
+                        $1280
+                      </div>
+                      <div class="col-6 col-md-2 col-xl-2 amount">×1</div>
+                      <div class="col-6 col-md-2 col-xl-2 all-price">$1280</div>
+                    </div>
+                    <div class="row product">
+                      <div class="col-4 col-md-2 col-xl-2 image">
+                        <img src="images/glass/purple-rose.jpg" alt="" />
+                      </div>
+                      <div class="col-8 col-md-4 col-xl-4 text">
+                        紫玫瑰永生玻璃大花盅 小夜燈
+                      </div>
+                      <div class="col-12 col-md-2 col-xl-2 one-price">
+                        $1980
+                      </div>
+                      <div class="col-6 col-md-2 col-xl-2 amount">×1</div>
+                      <div class="col-6 col-md-2 col-xl-2 all-price">$1980</div>
+                    </div>
+                    <div class="row product">
+                      <div class="col-4 col-md-2 col-xl-2 image">
+                        <img src="images/card/pink-babybreath.jpg" alt="" />
+                      </div>
+                      <div class="col-8 col-md-4 col-xl-4 text">
+                        手作粉滿天星乾燥花卡片
+                      </div>
+                      <div class="col-12 col-md-2 col-xl-2 one-price">$150</div>
+                      <div class="col-6 col-md-2 col-xl-2 amount">×1</div>
+                      <div class="col-6 col-md-2 col-xl-2 all-price">$150</div>
+                    </div>
+                    <div class="row count">
+                      <div class="col-12 col-md-8 col-xl-8"></div>
+                      <div class="col-6 col-md-2 col-xl-2 total-price-text">
+                        合計
+                      </div>
+                      <div class="col-6 col-md-2 col-xl-2 total-price">
+                        $3410
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="pills-review"
+              role="tabpanel"
+              aria-labelledby="pills-review-tab"
+            >
+              <!-- 評分與評論-->
+
+              <div class="row">
+                <div class="col-12 review">
+                  <!-- <div class="title">評論</div> -->
+                  <div class="all-review">
+                    <template>
+                      <div class="review-item">
+                        <div class="information">
+                          <div class="top">
+                            <div class="left">
+                              <!-- 商品圖 -->
+                              <img src="images/product/user.png" />
+                              <div class="name-rating">
+                                <!-- 評論人 -->
+                                <div class="name">d****o</div>
+                                <!-- 評論星等 -->
+                                <div class="rating">★★★★★</div>
+                              </div>
+                            </div>
+                            <div class="right">
+                              <!-- 評論日期 -->
+                              <div class="date">2023-01-04</div>
+                            </div>
+                          </div>
+
+                          <div class="bottom">
+                            <div class="product-picture">
+                              <img src="images/bouquet/white-rose.jpg" alt="" />
+                            </div>
+                            <div class="text">
+                              <p class="product-name">白玫瑰永生花束</p>
+                              一周年送給女朋友，她很喜歡&#9825;
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </template>
+                    <div class="review-item">
+                      <div class="information">
+                        <div class="top">
+                          <div class="left">
+                            <!-- 商品圖 -->
+                            <img src="images/product/user.png" />
+                            <div class="name-rating">
+                              <!-- 評論人 -->
+                              <div class="name">d****o</div>
+                              <!-- 評論星等 -->
+                              <div class="rating">★★★★★</div>
+                            </div>
+                          </div>
+                          <div class="right">
+                            <!-- 評論日期 -->
+                            <div class="date">2023-01-04</div>
+                          </div>
+                        </div>
+
+                        <div class="bottom">
+                          <div class="product-picture">
+                            <img src="images/bouquet/white-rose.jpg" alt="" />
+                          </div>
+                          <div class="text">
+                            <p class="product-name">白玫瑰永生花束</p>
+                            一周年送給女朋友，她很喜歡&#9825;
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="review-item">
+                      <div class="information">
+                        <div class="top">
+                          <div class="left">
+                            <img src="images/product/user.png" />
+                            <div class="name-rating">
+                              <div class="name">d****o</div>
+                              <div class="rating">★★★★★</div>
+                            </div>
+                          </div>
+                          <div class="right">
+                            <div class="date">2023-01-03</div>
+                          </div>
+                        </div>
+
+                        <div class="bottom">
+                          <div class="product-picture">
+                            <img src="images/glass/purple-rose.jpg" alt="" />
+                          </div>
+                          <div class="text">
+                            <p class="product-name">
+                              紫玫瑰永生玻璃大花盅 小夜燈
+                            </p>
+                            紫玫瑰裝在玻璃裡很美！
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="review-item">
+                      <div class="information">
+                        <div class="top">
+                          <div class="left">
+                            <img src="images/product/user.png" />
+                            <div class="name-rating">
+                              <div class="name">d****o</div>
+                              <div class="rating">★★★★★</div>
+                            </div>
+                          </div>
+                          <div class="right">
+                            <div class="date">2023-01-01</div>
+                          </div>
+                        </div>
+
+                        <div class="bottom">
+                          <div class="product-picture">
+                            <img src="images/bouquet/gerbera.jpg" alt="" />
+                          </div>
+                          <div class="text">
+                            <p class="product-name">非洲菊乾燥花束</p>
+                            擺飾起來挺漂亮的！
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="review-item">
+                      <div class="information">
+                        <div class="top">
+                          <div class="left">
+                            <img src="images/product/user.png" />
+                            <div class="name-rating">
+                              <div class="name">d****o</div>
+                              <div class="rating">★★★★★</div>
+                            </div>
+                          </div>
+                          <div class="right">
+                            <div class="date">2023-12-26</div>
+                          </div>
+                        </div>
+
+                        <div class="bottom">
+                          <div class="product-picture">
+                            <img src="images/card/oxeye-daisy.jpg" alt="" />
+                          </div>
+                          <div class="text">
+                            <p class="product-name">法國白梅乾燥花卡片</p>
+                            很有特色的卡片！收到覺得很滿意！
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 會員資料(可修改) -->
+            <div
+              class="tab-pane fade"
+              id="pills-member"
+              role="tabpanel"
+              aria-labelledby="pills-member-tab"
+            >
+              <div class="container-fluid member-information">
+                <h1 class="inf-h1">會員資料</h1>
+                <div class="row">
+                  <div class="col-12 col-md-4">
+                    <form
+                      id="user-image"
+                      class="inf-img-form"
+                      method="post"
+                      action="#"
+                    >
+                      <!-- 會員頭像 -->
+                      <img
+                        src="images/personal-information/user-inf.png"
+                        class="inf-img-user"
+                      /><br />
+                    </form>
+                    <form id="user-account-password" method="post" action="#">
+                      <!-- 帳號 -->
+                      <div class="inf-input-l">
+                        <input
+                          type="text"
+                          name="account"
+                          value="QAQ"
+                          class="inf-input-text"
+                          required
+                        /><br />
+                      </div>
+                      <!-- 密碼 -->
+                      <div class="inf-input-l">
+                        <input
+                          type="password"
+                          name="password"
+                          value="12345678"
+                          minlength="8"
+                          class="inf-input-text"
+                          required
+                        /><br />
+                      </div>
+                    </form>
+                  </div>
+                  <div class="col-12 col-md-4">
+                    <form
+                      id="ps-inf-c"
+                      class="inf-icon-form"
+                      method="post"
+                      action="#"
+                    >
+                      <!-- 會員名字 -->
+                      <div class="inf-input">
+                        <img
+                          src="images/personal-information/id-card.png"
+                          class="inf-icon"
+                        /><br />
+                        <input
+                          type="text"
+                          name="uesr-name"
+                          value="野原新之助"
+                          class="inf-input-text"
+                          required
+                        /><br />
+                      </div>
+                      <!-- 會員電話號碼 -->
+                      <div class="inf-input">
+                        <img
+                          src="images/personal-information/phone-call.png"
+                          class="inf-icon"
+                        /><br />
+                        <input
+                          type="text"
+                          name="phone-call"
+                          value=" 03-265-9999"
+                          class="inf-input-text"
+                        /><br />
+                      </div>
+                      <!-- 會員地址 -->
+                      <div class="inf-input">
+                        <img
+                          src="images/personal-information/home-address.png"
+                          class="inf-icon"
+                        /><br />
+                        <input
+                          type="text"
+                          name="address"
+                          value="桃園市中壢區中北路200號"
+                          class="inf-input-text"
+                        /><br />
+                      </div>
+                    </form>
+                  </div>
+                  <div class="col-12 col-md-4">
+                    <form
+                      id="personal-inf-r"
+                      class="inf-icon-form"
+                      method="post"
+                      action="#"
+                    >
+                      <!-- 會員信箱 -->
+                      <div class="inf-input">
+                        <img
+                          src="images/personal-information/email.png"
+                          class="inf-icon"
+                        /><br />
+                        <input
+                          type="email"
+                          value="QAQ_(＞x＜)@gmail.com"
+                          class="inf-input-text"
+                          required
+                        /><br />
+                      </div>
+                      <!-- 會員性別 -->
+                      <div class="inf-input">
+                        <img
+                          src="images/personal-information/gender.png"
+                          class="inf-icon"
+                        /><br />
+                        <input
+                          type="radio"
+                          name="gender"
+                          value="Male"
+                          checked
+                        />Male
+                        <input
+                          type="radio"
+                          name="gender"
+                          value="Female"
+                        />Female<br />
+                      </div>
+                      <!-- 會員生日 -->
+                      <div class="inf-input">
+                        <img
+                          src="images/personal-information/birthday.png"
+                          class="inf-icon"
+                        /><br />
+                        <input
+                          type="date"
+                          name="selectdate"
+                          class="inf-input-text"
+                          value="2000-05-05"
+                        /><br />
+                        <!-- 修改按鈕 -->
+                        <input
+                          type="button"
+                          name="alter"
+                          value="修改"
+                          class="inf-button"
+                        /><br />
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 購物車 -->
+            <div
+              class="tab-pane fade show active"
+              id="pills-cart"
+              role="tabpanel"
+              aria-labelledby="pills-cart-tab"
+            >
+              <div class="confirm-order">
+                <div class="title">購物車</div>
+                <form id="confirm-order" method="post" action="#">
+                  <div class="all-order">
+                    <!-- 標題 -->
+                    <div class="row titles hidden-xs">
+                      <div class="col-12 col-md-5 col-xl-5">商品</div>
+                      <div class="col-12 col-md-2 col-xl-2">單價</div>
+                      <div class="col-12 col-md-2 col-xl-2">數量</div>
+                      <div class="col-12 col-md-2 col-xl-2">總計</div>
+                      <div class="col-12 col-md-1 col-xl-1">刪除</div>
+                    </div>
+                    <template>
+                      <div class="row product">
+                        <!-- 圖片 -->
+                        <div class="col-4 col-md-2 col-xl-2 image">
+                          <a href="product.html">
+                            <img
+                              src="images/bouquet/white-sunflower.jpg"
+                              alt=""
+                            />
+                          </a>
+                        </div>
+                        <!-- 名稱 -->
+                        <div class="col-8 col-md-3 col-xl-3 text">
+                          白向日葵乾燥花束
+                        </div>
+                        <!-- 單價 -->
+                        <div class="col-12 col-md-2 col-xl-2 one-price">
+                          $
+                          <span class="one-price-num">1280</span>
+                        </div>
+                        <!-- 增減數量按鈕 -->
+                        <div class="col-6 col-md-2 col-xl-2 amount">
+                          <ul class="btn-numbox">
+                            <li>
+                              <ul class="count">
+                                <li>
+                                  <span id="num-jian" class="num-jian">-</span>
+                                </li>
+                                <li>
+                                  <input
+                                    type="text"
+                                    class="input-num"
+                                    value="1"
+                                    readonly="readonly"
+                                  />
+                                </li>
+                                <li>
+                                  <span id="num-jia" class="num-jia">+</span>
+                                </li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </div>
+                        <!-- 總計價格 -->
+                        <div class="col-6 col-md-2 col-xl-2 all-price">
+                          $<span class="all-price-num">1280</span>
+                        </div>
+                        <!-- 刪除鍵 -->
+                        <div
+                          class="col-12 col-md-1 col-xl-1 delete"
+                          onclick="return false;"
+                        >
+                          ✖
+                        </div>
+                      </div>
+                    </template>
+                    <div class="row product">
+                      <!-- 圖片 -->
+                      <div class="col-4 col-md-2 col-xl-2 image">
+                        <a href="product.html">
+                          <img
+                            src="images/bouquet/white-sunflower.jpg"
+                            alt=""
+                          />
+                        </a>
+                      </div>
+                      <!-- 名稱 -->
+                      <div class="col-8 col-md-3 col-xl-3 text">
+                        白向日葵乾燥花束
+                      </div>
+                      <!-- 單價 -->
+                      <div class="col-12 col-md-2 col-xl-2 one-price">
+                        $
+                        <span class="one-price-num">1280</span>
+                      </div>
+                      <!-- 增減數量按鈕 -->
+                      <div class="col-6 col-md-2 col-xl-2 amount">
+                        <ul class="btn-numbox">
+                          <li>
+                            <ul class="count">
+                              <li>
+                                <span id="num-jian" class="num-jian">-</span>
+                              </li>
+                              <li>
+                                <input
+                                  type="text"
+                                  class="input-num"
+                                  value="1"
+                                  readonly="readonly"
+                                />
+                              </li>
+                              <li>
+                                <span id="num-jia" class="num-jia">+</span>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                      <!-- 總計價格 -->
+                      <div class="col-6 col-md-2 col-xl-2 all-price">
+                        $<span class="all-price-num">1280</span>
+                      </div>
+                      <!-- 刪除鍵 -->
+                      <div
+                        class="col-12 col-md-1 col-xl-1 delete"
+                        onclick="return false;"
+                      >
+                        ✖
+                      </div>
+                    </div>
+                    <div class="row product">
+                      <div class="col-4 col-md-2 col-xl-2 image">
+                        <a href="product.html">
+                          <img src="images/glass/purple-rose.jpg" alt="" />
+                        </a>
+                      </div>
+                      <div class="col-8 col-md-3 col-xl-3 text">
+                        紫玫瑰永生玻璃大花盅 小夜燈
+                      </div>
+                      <div class="col-12 col-md-2 col-xl-2 one-price">
+                        $
+                        <span class="one-price-num">1980</span>
+                      </div>
+                      <div class="col-6 col-md-2 col-xl-2 amount">
+                        <ul class="btn-numbox">
+                          <li>
+                            <ul class="count">
+                              <li>
+                                <span id="num-jian" class="num-jian">-</span>
+                              </li>
+                              <li>
+                                <input
+                                  type="text"
+                                  class="input-num"
+                                  value="1"
+                                  readonly="readonly"
+                                />
+                              </li>
+                              <li>
+                                <span id="num-jia" class="num-jia">+</span>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="col-6 col-md-2 col-xl-2 all-price">
+                        $<span class="all-price-num">1980</span>
+                      </div>
+                      <div
+                        class="col-12 col-md-1 col-xl-1 delete"
+                        onclick="return false;"
+                      >
+                        ✖
+                      </div>
+                    </div>
+                    <div class="row product">
+                      <div class="col-4 col-md-2 col-xl-2 image">
+                        <a href="product.html">
+                          <img src="images/card/pink-babybreath.jpg" alt="" />
+                        </a>
+                      </div>
+                      <div class="col-8 col-md-3 col-xl-3 text">
+                        手作粉滿天星乾燥花卡片
+                      </div>
+                      <div class="col-12 col-md-2 col-xl-2 one-price">
+                        $
+                        <span class="one-price-num">150</span>
+                      </div>
+                      <div class="col-6 col-md-2 col-xl-2 amount">
+                        <ul class="btn-numbox">
+                          <li>
+                            <ul class="count">
+                              <li>
+                                <span id="num-jian" class="num-jian">-</span>
+                              </li>
+                              <li>
+                                <input
+                                  type="text"
+                                  class="input-num"
+                                  value="1"
+                                  readonly="readonly"
+                                />
+                              </li>
+                              <li>
+                                <span id="num-jia" class="num-jia">+</span>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="col-6 col-md-2 col-xl-2 all-price">
+                        $<span class="all-price-num">150</span>
+                      </div>
+                      <div
+                        class="col-12 col-md-1 col-xl-1 delete"
+                        onclick="return false;"
+                      >
+                        ✖
+                      </div>
+                    </div>
+                    <!-- 合計欄位 -->
+                    <div class="row count">
+                      <div class="col-12 col-md-7 col-xl-7"></div>
+                      <!-- 合計標題 -->
+                      <div class="col-6 col-md-2 col-xl-2 total-price-text">
+                        合計
+                      </div>
+                      <!-- 合計金額 -->
+                      <div class="col-6 col-md-1 col-xl-1 total-price">
+                        $
+                        <span class="total-price-num">3410</span>
+                      </div>
+                      <!-- 下一步(到填寫基本資料畫面)-->
+                      <div class="col-12 col-md-2 col-xl-2 next">
+                        <a class="button-next" href="car-basic-data.html">
+                          下一步
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!------------------ 各版面內容結束---------------------------------------------------------------------------------- -->
+      </article>
+      <!-- 如果頁面長度很短，可以讓footer固定在頁面底部 -->
+      <div class="sticky-footer"></div>
+    </main>
+    <!-- footer -->
+    <footer>
+      <div class="container-fluid footer">
+        <div class="row">
+          <div class="text-center">
+            <p>
+              版權所有 &copy; 2022 李欣樺 胡文欣 葉姿妤 沈芋廷 葉絮喬 蘇莉凱
+            </p>
+            <p>瀏覽人數： 3 人</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <!-- bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- icon -->
+    <script
+      src="https://kit.fontawesome.com/e2df7f4d73.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- to top -->
+    <script src="js/top.js"></script>
+
+    <!-- 登入或註冊 介面 -->
+    <script src="js/login-signup.js"></script>
+
+    <!--購物車內 數量增減按鈕 數值變化 總金額變化 刪除功能 -->
+    <script src="js/cart.js"></script>
+  </body>
+</html>

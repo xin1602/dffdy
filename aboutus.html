@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DFFDY</title>
+    <link rel="icon" href="images/web-icon.png" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/header-nav.css" />
+    <link rel="stylesheet" href="css/login-signup.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <!-- 從這裡開始引入css檔 -->
+    <link rel="stylesheet" href="css/aboutus.css" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- header & nav -->
+    <header>
+      <nav
+        class="navbar fixed-top navbar-expand-lg navbar-light"
+        style="background-color: #94b2ca"
+      >
+        <div class="container-fluid">
+          <!-- 店家名稱 -->
+          <a class="navbar-brand logo" href="index.html"><span>DFFDY</span></a>
+          <!-- 側邊選單按鈕 -->
+          <button
+            class="navbar-toggler shadow-inset"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- 選單 -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  所有商品
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="allproducts.html"
+                      >所有商品
+                    </a>
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="bouquet.html">花束 </a>
+                  </li>
+
+                  <li>
+                    <a class="dropdown-item" href="glass.html">玻璃瓶</a>
+                  </li>
+
+                  <li>
+                    <a class="dropdown-item" href="card.html">卡片</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="aboutus.html"
+                  >關於我們</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="faq.html">常見問題 </a>
+              </li>
+
+              <li class="nav-item home-icon">
+                <a class="nav-link" aria-current="page" href="index.html"
+                  ><i class="fa-sharp fa-solid fa-house"></i
+                ></a>
+              </li>
+              <li class="nav-item shopping-cart-icon">
+                <a class="nav-link" aria-current="page" href="cart.html">
+                  <i class="fa-solid fa-cart-shopping"></i
+                ></a>
+              </li>
+              <li class="nav-item user-icon" id="user">
+                <div class="nav-link" aria-current="page">
+                  <i class="fa-solid fa-user"></i>
+                </div>
+              </li>
+              <!-- 登入或註冊 介面 -->
+              <div class="login-signup" id="login-signup">
+                <div class="content">
+                  <div class="login">
+                    <p>已經是會員</p>
+                    <button
+                      id="go-to-login"
+                      type="button"
+                      onclick="location.href='log-in.html'"
+                    >
+                      登入
+                    </button>
+                  </div>
+                  <div class="dividing-line"></div>
+                  <div class="signup">
+                    <p>還沒有帳號嗎？</p>
+                    <button
+                      id="go-to-signup"
+                      type="button"
+                      onclick="location.href='register.html'"
+                    >
+                      註冊
+                    </button>
+                  </div>
+                  <div class="signup">
+                    <span id="leave-login-signup"> 訪客模式 </span>
+                  </div>
+                </div>
+              </div>
+            </ul>
+            <!-- 搜尋欄 -->
+            <form class="d-flex" method="post" action="#">
+              <input
+                class="form-control me-2 shadow-none"
+                type="search"
+                placeholder=""
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-dark shadow-none" type="submit">
+                <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- 回頂端 -->
+    <div class="totop">
+      <a href="#top" class="totop" id="totop">
+        <button class="totop-button">
+          <img src="images/top.png" />
+        </button>
+      </a>
+    </div>
+    <!-- 主要內容 -->
+    <main class="container-fluid">
+      <article>
+        <!-------------- 從這裡開始放各個版面的內容 ------------------------------------------------------------------------------->
+        <div class="container aboutus-part">
+          <div class="card-item">
+            <div class="card">
+              <div class="imgBx">
+                <img class="myphoto" src="images/aboutus/photo-11044106.jpg" />
+              </div>
+              <div class="content">
+                <div class="details">
+                  <h2>網頁前端 李欣樺</h2>
+                  <p>
+                    第一次做這麼大型的專題，有非常多需要自學的東西，花了不少時間反覆實驗測試到最後成完成，才有了現在的這個網站，最有成就感的是我們這組在時間有限的情況下做出RWD，也因為這樣熟悉了bootstrap
+                    要如何使用。
+                  </p>
+                  <ul class="social-icons">
+                    <li>
+                      <a
+                        href="https://www.facebook.com/profile.php?id=100026327163973"
+                        target="_blank"
+                        ><i class="fa-brands fa-square-facebook"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.instagram.com/xinhua.8109/"
+                        target="_blank"
+                        ><i class="fa-brands fa-square-instagram"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a href="mailto:xli89549@gmail.com" target="_blank"
+                        ><i class="fa-solid fa-square-envelope"></i
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-item">
+            <div class="card">
+              <div class="imgBx">
+                <img class="myphoto" src="images/aboutus/photo-11044107.jpg" />
+              </div>
+              <div class="content">
+                <div class="details">
+                  <h2>網頁前端 胡文欣</h2>
+                  <p>
+                    要在有限時間內製作出好的網頁真的不容易，上課學到都是基本，但遇到的困難卻是延伸出去的問題，所以有蠻多東西都是要自學。還好這次是團隊合作，雖然大家都很忙，但我們也是會互相幫忙也會一起想辦法努力做到最好。
+                  </p>
+                  <ul class="social-icons">
+                    <li>
+                      <a
+                        href="https://www.facebook.com/profile.php?id=100007782402051"
+                        target="_blank"
+                        ><i class="fa-brands fa-square-facebook"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.instagram.com/wenxin_1006/"
+                        target="_blank"
+                        ><i class="fa-brands fa-square-instagram"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a href="mailto:sandyhu12345@gmail.com" target="_blank"
+                        ><i class="fa-solid fa-square-envelope"></i
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-item">
+            <div class="card">
+              <div class="imgBx">
+                <img class="myphoto" src="images/aboutus/photo-11044158.jpg" />
+              </div>
+              <div class="content">
+                <div class="details">
+                  <h2>網頁前端 葉姿妤</h2>
+                  <p>
+                    這次的專題製作主要負責的工作為設計文案，這對內向且缺乏創意的我來說是一大挑戰!透過這次機會，我學到如何寫出有特色又能打動人心的話語，算是一個很特別的體驗!
+                  </p>
+                  <ul class="social-icons">
+                    <li>
+                      <a
+                        href="https://www.facebook.com/profile.php?id=100089208510832"
+                        target="_blank"
+                        ><i class="fa-brands fa-square-facebook"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.instagram.com/cathyyeh_2003/"
+                        target="_blank"
+                        ><i class="fa-brands fa-square-instagram"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a href="mailto:cathyyeh45@gmail.com" target="_blank"
+                        ><i class="fa-solid fa-square-envelope"></i
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-item">
+            <div class="card">
+              <div class="imgBx">
+                <img class="myphoto" src="images/aboutus/photo-11044230.jpg" />
+              </div>
+              <div class="content">
+                <div class="details">
+                  <h2>網頁後端 沈芋廷</h2>
+                  <p>
+                    重視頻道傢伙，起來參與五年不管先進教育日前公里，提升之一背景展示這個需求，同意晶片，中學一位節目婦女請問一座規則自從後來對外地方桌面，他。
+                  </p>
+                  <ul class="social-icons">
+                    <li>
+                      <a href="https://www.facebook.com/utx59" target="_blank"
+                        ><i class="fa-brands fa-square-facebook"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a href="https://www.instagram.com/utx59/" target="_blank"
+                        ><i class="fa-brands fa-square-instagram"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a href="mailto:utx0359@gmail.com" target="_blank"
+                        ><i class="fa-solid fa-square-envelope"></i
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-item">
+            <div class="card">
+              <div class="imgBx">
+                <img class="myphoto" src="images/aboutus/photo-11044259.jpg" />
+              </div>
+              <div class="content">
+                <div class="details">
+                  <h2>網頁後端 葉絮喬</h2>
+                  <p>
+                    重視頻道傢伙，起來參與五年不管先進教育日前公里，提升之一背景展示這個需求，同意晶片，中學一位節目婦女請問一座規則自從後來對外地方桌面，他。
+                  </p>
+                  <ul class="social-icons">
+                    <li>
+                      <a
+                        href="https://www.facebook.com/profile.php?id=100008879311058"
+                        target="_blank"
+                        ><i class="fa-brands fa-square-facebook"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.instagram.com/yxq_0121/"
+                        target="_blank"
+                        ><i class="fa-brands fa-square-instagram"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a href="mailto:yxuqiao0121@gmail.com" target="_blank"
+                        ><i class="fa-solid fa-square-envelope"></i
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-item">
+            <div class="card">
+              <div class="imgBx">
+                <img class="myphoto" src="images/aboutus/photo-11044259.jpg" />
+              </div>
+              <div class="content">
+                <div class="details">
+                  <h2>網頁後端 蘇莉凱</h2>
+                  <p>
+                    重視頻道傢伙，起來參與五年不管先進教育日前公里，提升之一背景展示這個需求，同意晶片，中學一位節目婦女請問一座規則自從後來對外地方桌面，他。
+                  </p>
+                  <ul class="social-icons">
+                    <li>
+                      <a
+                        href="https://www.facebook.com/su.kathy.54"
+                        target="_blank"
+                        ><i class="fa-brands fa-square-facebook"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.instagram.com/katniss_206/"
+                        target="_blank"
+                        ><i class="fa-brands fa-square-instagram"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a href="mailto:K062703@gmail.com" target="_blank"
+                        ><i class="fa-solid fa-square-envelope"></i
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!------------------ 各版面內容結束---------------------------------------------------------------------------------- -->
+      </article>
+      <!-- 如果頁面長度很短，可以讓footer固定在頁面底部 -->
+      <div class="sticky-footer"></div>
+    </main>
+    <!-- footer -->
+    <footer>
+      <div class="container-fluid footer">
+        <div class="row">
+          <div class="text-center">
+            <p>
+              版權所有 &copy; 2022 李欣樺 胡文欣 葉姿妤 沈芋廷 葉絮喬 蘇莉凱
+            </p>
+            <p>瀏覽人數： 3 人</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <!-- bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- icon -->
+    <script
+      src="https://kit.fontawesome.com/e2df7f4d73.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- to top -->
+    <script src="js/top.js"></script>
+
+    <!-- 登入或註冊 介面 -->
+    <script src="js/login-signup.js"></script>
+  </body>
+</html>

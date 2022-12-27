@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DFFDY</title>
+    <link rel="icon" href="images/web-icon.png" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/header-nav.css" />
+    <link rel="stylesheet" href="css/login-signup.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <!-- 從這裡開始引入css檔 -->
+    <link rel="stylesheet" href="css/order-completed.css" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- header & nav -->
+    <header>
+      <nav
+        class="navbar fixed-top navbar-expand-lg navbar-light"
+        style="background-color: #94b2ca"
+      >
+        <div class="container-fluid">
+          <!-- 店家名稱 -->
+          <a class="navbar-brand logo" href="index.html"><span>DFFDY</span></a>
+          <!-- 側邊選單按鈕 -->
+          <button
+            class="navbar-toggler shadow-inset"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- 選單 -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  所有商品
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="allproducts.html"
+                      >所有商品
+                    </a>
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="bouquet.html">花束 </a>
+                  </li>
+
+                  <li>
+                    <a class="dropdown-item" href="glass.html">玻璃瓶</a>
+                  </li>
+
+                  <li>
+                    <a class="dropdown-item" href="card.html">卡片</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="aboutus.html"
+                  >關於我們</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="faq.html">常見問題 </a>
+              </li>
+
+              <li class="nav-item home-icon">
+                <a class="nav-link" aria-current="page" href="index.html"
+                  ><i class="fa-sharp fa-solid fa-house"></i
+                ></a>
+              </li>
+              <li class="nav-item shopping-cart-icon">
+                <a class="nav-link" aria-current="page" href="cart.html">
+                  <i class="fa-solid fa-cart-shopping"></i
+                ></a>
+              </li>
+              <li class="nav-item user-icon" id="user">
+                <div class="nav-link" aria-current="page">
+                  <i class="fa-solid fa-user"></i>
+                </div>
+              </li>
+              <!-- 登入或註冊 介面 -->
+              <div class="login-signup" id="login-signup">
+                <div class="content">
+                  <div class="login">
+                    <p>已經是會員</p>
+                    <button
+                      id="go-to-login"
+                      type="button"
+                      onclick="location.href='log-in.html'"
+                    >
+                      登入
+                    </button>
+                  </div>
+                  <div class="dividing-line"></div>
+                  <div class="signup">
+                    <p>還沒有帳號嗎？</p>
+                    <button
+                      id="go-to-signup"
+                      type="button"
+                      onclick="location.href='register.html'"
+                    >
+                      註冊
+                    </button>
+                  </div>
+                  <div class="signup">
+                    <span id="leave-login-signup"> 訪客模式 </span>
+                  </div>
+                </div>
+              </div>
+            </ul>
+            <!-- 搜尋欄 -->
+            <form class="d-flex" method="post" action="#">
+              <input
+                class="form-control me-2 shadow-none"
+                type="search"
+                placeholder=""
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-dark shadow-none" type="submit">
+                <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- 回頂端 -->
+    <div class="totop">
+      <a href="#top" class="totop" id="totop">
+        <button class="totop-button">
+          <img src="images/top.png" />
+        </button>
+      </a>
+    </div>
+    <!-- 主要內容 -->
+    <main class="container-fluid">
+      <article>
+        <!-------------- 從這裡開始放各個版面的內容 ------------------------------------------------------------------------------->
+        <section class="container order-completed-part">
+          <!-- 進度圓圈動畫 -->
+          <div class="circle-bar">
+            <svg
+              viewBox="0 0 100 100"
+              xmlns="http://www.w3.org/2000/svg"
+              preserveAspectRatio="none"
+              data-value="100"
+            >
+              <circle r="45" cx="50" cy="50" />
+
+              <path
+                class="meter"
+                d="M5,50a45,45 0 1,0 90,0a45,45 0 1,0 -90,0"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-dashoffset="282.78302001953125"
+                stroke-dasharray="282.78302001953125"
+              />
+
+              <text
+                x="50"
+                y="50"
+                text-anchor="middle"
+                dominant-baseline="central"
+                font-size="20"
+              ></text>
+            </svg>
+          </div>
+          <!-- 告知購買人已完成訂單 -->
+          <h4 class="inform-text">
+            訂單已送出！請耐心等候並留意email物流訊息，感謝您的購買。
+          </h4>
+          <div class="order-completed-information">
+            <div class="completed-order">
+              <div class="title">訂單明細</div>
+              <form id="completed-order" method="post" action="#">
+                <div class="all-order">
+                  <!-- 標題 -->
+                  <div class="row titles hidden-xs">
+                    <div class="col-12 col-md-6 col-xl-6">商品</div>
+                    <div class="col-12 col-md-2 col-xl-2">單價</div>
+                    <div class="col-12 col-md-2 col-xl-2">數量</div>
+                    <div class="col-12 col-md-2 col-xl-2 total-price-title">
+                      總計
+                    </div>
+                  </div>
+                  <template>
+                    <div class="row product">
+                      <div class="col-4 col-md-2 col-xl-2 image">
+                        <!-- 商品圖 -->
+                        <img src="images/bouquet/white-sunflower.jpg" alt="" />
+                      </div>
+                      <!-- 商品名稱 -->
+                      <div class="col-8 col-md-4 col-xl-4 text">
+                        白向日葵乾燥花束
+                      </div>
+                      <!-- 單價 -->
+                      <div class="col-12 col-md-2 col-xl-2 one-price">
+                        $1280
+                      </div>
+                      <!-- 數量 -->
+                      <div class="col-6 col-md-2 col-xl-2 amount">1</div>
+                      <!-- 總計金額 -->
+                      <div class="col-6 col-md-2 col-xl-2 all-price">$1280</div>
+                    </div>
+                  </template>
+                  <div class="row product">
+                    <div class="col-4 col-md-2 col-xl-2 image">
+                      <!-- 商品圖 -->
+                      <img src="images/bouquet/white-sunflower.jpg" alt="" />
+                    </div>
+                    <!-- 商品名稱 -->
+                    <div class="col-8 col-md-4 col-xl-4 text">
+                      白向日葵乾燥花束
+                    </div>
+                    <!-- 單價 -->
+                    <div class="col-12 col-md-2 col-xl-2 one-price">$1280</div>
+                    <!-- 數量 -->
+                    <div class="col-6 col-md-2 col-xl-2 amount">1</div>
+                    <!-- 總計金額 -->
+                    <div class="col-6 col-md-2 col-xl-2 all-price">$1280</div>
+                  </div>
+                  <div class="row product">
+                    <div class="col-4 col-md-2 col-xl-2 image">
+                      <img src="images/glass/purple-rose.jpg" alt="" />
+                    </div>
+                    <div class="col-8 col-md-4 col-xl-4 text">
+                      紫玫瑰永生玻璃大花盅 小夜燈
+                    </div>
+                    <div class="col-12 col-md-2 col-xl-2 one-price">$1980</div>
+                    <div class="col-6 col-md-2 col-xl-2 amount">1</div>
+                    <div class="col-6 col-md-2 col-xl-2 all-price">$1980</div>
+                  </div>
+                  <div class="row product">
+                    <div class="col-4 col-md-2 col-xl-2 image">
+                      <img src="images/card/pink-babybreath.jpg" alt="" />
+                    </div>
+                    <div class="col-8 col-md-4 col-xl-4 text">
+                      手作粉滿天星乾燥花卡片
+                    </div>
+                    <div class="col-12 col-md-2 col-xl-2 one-price">$150</div>
+                    <div class="col-6 col-md-2 col-xl-2 amount">1</div>
+                    <div class="col-6 col-md-2 col-xl-2 all-price">$150</div>
+                  </div>
+                  <div class="row count">
+                    <div class="col-12 col-md-8 col-xl-8"></div>
+                    <div class="col-6 col-md-2 col-xl-2 total-price-text">
+                      合計
+                    </div>
+                    <div class="col-6 col-md-2 col-xl-2 total-price">$3410</div>
+                    <div class="col-12 col-md-12 col-xl-12 next">
+                      <a class="button-finish" href="index.html"> 完成訂單 </a>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+        <!------------------ 各版面內容結束---------------------------------------------------------------------------------- -->
+      </article>
+      <!-- 如果頁面長度很短，可以讓footer固定在頁面底部 -->
+      <div class="sticky-footer"></div>
+    </main>
+    <!-- footer -->
+    <footer>
+      <div class="container-fluid footer">
+        <div class="row">
+          <div class="text-center">
+            <p>
+              版權所有 &copy; 2022 李欣樺 胡文欣 葉姿妤 沈芋廷 葉絮喬 蘇莉凱
+            </p>
+            <p>瀏覽人數： 3 人</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <!-- bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- icon -->
+    <script
+      src="https://kit.fontawesome.com/e2df7f4d73.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- to top -->
+    <script src="js/top.js"></script>
+
+    <!-- 登入或註冊 介面 -->
+    <script src="js/login-signup.js"></script>
+
+    <!-- circle bar -->
+    <script src="js/order-completed.js"></script>
+  </body>
+</html>
