@@ -52,6 +52,44 @@
 .all-products .picture {
   position: relative;
 }
+
+/* 增減 開始---------------------------------------------------------------------- */
+
+.all-products .quantity {
+  padding-bottom: 20px;
+}
+.all-products .decrease {
+  border: 0;
+  border-radius: 5px;
+  padding: 5px 0px;
+}
+
+.all-products .decrease:hover {
+  border: 1px solid #999;
+}
+
+.all-products input.middle {
+  border: 0;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 5px 0px;
+  text-align: center;
+}
+
+.all-products .increase {
+  border: 0;
+  border-radius: 5px;
+  padding: 5px 0px;
+}
+
+.all-products .increase:hover {
+  border: 1px solid #999;
+}
+
+/* 增減 結束----------------------------------------------------------------------------*/
+
 .all-products .add-shopping-cart {
   text-align: center;
   width: 100%;
