@@ -248,6 +248,41 @@
               <div class="col-12 col-md-12 col-xl-12 title text-center">
                 花束
               </div>
+              <!-- 有增減數量功能 -->
+              <template>
+                <div class="col-12 col-md-6 col-xl-4">
+                  <div class="item">
+                    <a href="product.html">
+                      <div class="picture">
+                        <!-- 花束商品圖 -->
+                        <img
+                          class="img-fluid"
+                          src="images/bouquet/pink-rose.jpg"
+                        />
+                      </div>
+                      <!-- 花束商品名稱 -->
+                      <div class="product-name">粉玫瑰永生花束</div>
+                      <!-- 花束商品價格 -->
+                      <div class="product-price">NT$2,180</div>
+                    </a>
+                    <!-- 增減數量按鈕 -->
+                    <div class="quantity form row">
+                      <button class="decrease col-1" data-decrease>-</button>
+                      <input
+                        class="middle col-10"
+                        data-value
+                        type="text"
+                        value="1"
+                      />
+                      <button class="increase col-1" data-increase>+</button>
+                    </div>
+                    <!-- 加入購物車按鈕 -->
+                    <button class="add-shopping-cart" onclick="addCart()">
+                      加入購物車
+                    </button>
+                  </div>
+                </div>
+              </template>
               <template>
                 <div class="col-12 col-md-6 col-xl-4">
                   <div class="item">
@@ -730,5 +765,8 @@
 
     <!-- 加入購物車 & tabs -->
     <script src="js/product.js"></script>
+
+    <!-- 數量增減按鈕 輸入框 -->
+    <script src="js/quantity.js"></script>
   </body>
 </html>
