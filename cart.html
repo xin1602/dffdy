@@ -523,8 +523,9 @@
                 <div class="col-12 review">
                   <!-- <div class="title">評論</div> -->
                   <div class="all-review">
-                    <template>
-                      <div class="review-item">
+                    <!-- 修改前狀態 -->
+                    <template
+                      ><div class="review-item">
                         <div class="information">
                           <div class="top">
                             <div class="left">
@@ -550,11 +551,13 @@
                             <div class="text">
                               <p class="product-name">白玫瑰永生花束</p>
                               一周年送給女朋友，她很喜歡&#9825;
+                              <div class="button-group">
+                                <input type="button" value="修改" />
+                              </div>
                             </div>
                           </div>
-                        </div>
-                      </div>
-                    </template>
+                        </div></div
+                    ></template>
                     <div class="review-item">
                       <div class="information">
                         <div class="top">
@@ -581,6 +584,9 @@
                           <div class="text">
                             <p class="product-name">白玫瑰永生花束</p>
                             一周年送給女朋友，她很喜歡&#9825;
+                            <div class="button-group">
+                              <input type="button" value="修改" />
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -609,6 +615,9 @@
                               紫玫瑰永生玻璃大花盅 小夜燈
                             </p>
                             紫玫瑰裝在玻璃裡很美！
+                            <div class="button-group">
+                              <input type="button" value="修改" />
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -635,6 +644,9 @@
                           <div class="text">
                             <p class="product-name">非洲菊乾燥花束</p>
                             擺飾起來挺漂亮的！
+                            <div class="button-group">
+                              <input type="button" value="修改" />
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -661,10 +673,86 @@
                           <div class="text">
                             <p class="product-name">法國白梅乾燥花卡片</p>
                             很有特色的卡片！收到覺得很滿意！
+                            <div class="button-group">
+                              <input type="button" value="修改" />
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
+                    <template>
+                      <!-- 進入修改模式 -->
+                      <div class="review-item">
+                        <form method="post" action="#">
+                          <div class="information">
+                            <div class="top">
+                              <div class="left">
+                                <!-- 商品圖 -->
+                                <img src="images/product/user.png" />
+                                <div class="name-rating">
+                                  <!-- 評論人 -->
+                                  <div class="name">d****o</div>
+                                  <!-- 評論星等 -->
+                                  <div class="rating">
+                                    <input
+                                      type="radio"
+                                      name="star"
+                                      id="star5"
+                                    /><label for="star5"></label>
+                                    <input
+                                      type="radio"
+                                      name="star"
+                                      id="star4"
+                                    /><label for="star4"></label>
+                                    <input
+                                      type="radio"
+                                      name="star"
+                                      id="star3"
+                                    /><label for="star3"></label>
+                                    <input
+                                      type="radio"
+                                      name="star"
+                                      id="star2"
+                                    /><label for="star2"></label>
+                                    <input
+                                      type="radio"
+                                      name="star"
+                                      id="star1"
+                                    /><label for="star1"></label>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="right">
+                                <!-- 評論日期 -->
+                                <div class="date">2023-01-04</div>
+                              </div>
+                            </div>
+                            <div class="bottom">
+                              <div class="product-picture">
+                                <img
+                                  src="images/bouquet/white-rose.jpg"
+                                  alt=""
+                                />
+                              </div>
+                              <div class="text">
+                                <p class="product-name">白玫瑰永生花束</p>
+                                <textarea
+                                  class="form-control shadow-none"
+                                  rows="4"
+                                  name=""
+                                  placeholder="Comment"
+                                ></textarea>
+                                <div class="button-group">
+                                  <input type="button" value="提交" />
+                                  <input type="button" value="取消" />
+                                  <input type="button" value="刪除" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </template>
                   </div>
                 </div>
               </div>
@@ -678,6 +766,328 @@
             >
               <div class="container-fluid member-information">
                 <h1 class="inf-h1">會員資料</h1>
+                <template>
+                  <!-- 可修改狀態 -->
+                  <div class="row">
+                    <div class="col-12 col-md-4">
+                      <form
+                        id="user-image"
+                        class="inf-img-form"
+                        method="post"
+                        action="#"
+                      >
+                        <!-- 會員頭像 -->
+                        <img
+                          src="images/personal-information/user-inf.png"
+                          class="inf-img-user"
+                        /><br />
+                      </form>
+                      <form id="user-account-password" method="post" action="#">
+                        <!-- 帳號 -->
+                        <div class="inf-input-l">
+                          <input
+                            type="text"
+                            name="account"
+                            value="QAQ"
+                            class="inf-input-text"
+                            required
+                          /><br />
+                        </div>
+                        <!-- 密碼 -->
+                        <div class="inf-input-l">
+                          <input
+                            type="password"
+                            name="password"
+                            value="12345678"
+                            minlength="8"
+                            class="inf-input-text"
+                            required
+                          /><br />
+                        </div>
+                      </form>
+                    </div>
+                    <div class="col-12 col-md-4">
+                      <form
+                        id="ps-inf-c"
+                        class="inf-icon-form"
+                        method="post"
+                        action="#"
+                      >
+                        <!-- 會員名字 -->
+                        <div class="inf-input">
+                          <img
+                            src="images/personal-information/id-card.png"
+                            class="inf-icon"
+                          /><br />
+                          <input
+                            type="text"
+                            name="uesr-name"
+                            value="野原新之助"
+                            class="inf-input-text"
+                            required
+                          /><br />
+                        </div>
+                        <!-- 會員電話號碼 -->
+                        <div class="inf-input">
+                          <img
+                            src="images/personal-information/phone-call.png"
+                            class="inf-icon"
+                          /><br />
+                          <input
+                            type="text"
+                            name="phone-call"
+                            value=" 03-265-9999"
+                            class="inf-input-text"
+                          /><br />
+                        </div>
+                        <!-- 會員地址 -->
+                        <div class="inf-input">
+                          <img
+                            src="images/personal-information/home-address.png"
+                            class="inf-icon"
+                          /><br />
+                          <input
+                            type="text"
+                            name="address"
+                            value="桃園市中壢區中北路200號"
+                            class="inf-input-text"
+                          /><br />
+                        </div>
+                      </form>
+                    </div>
+                    <div class="col-12 col-md-4">
+                      <form
+                        id="personal-inf-r"
+                        class="inf-icon-form"
+                        method="post"
+                        action="#"
+                      >
+                        <!-- 會員信箱 -->
+                        <div class="inf-input">
+                          <img
+                            src="images/personal-information/email.png"
+                            class="inf-icon"
+                          /><br />
+                          <input
+                            type="email"
+                            value="QAQ_(＞x＜)@gmail.com"
+                            class="inf-input-text"
+                            required
+                          /><br />
+                        </div>
+                        <!-- 會員性別 -->
+                        <div class="inf-input">
+                          <img
+                            src="images/personal-information/gender.png"
+                            class="inf-icon"
+                          /><br />
+                          <input
+                            type="radio"
+                            name="gender"
+                            value="Male"
+                            checked
+                          />Male
+                          <input
+                            type="radio"
+                            name="gender"
+                            value="Female"
+                          />Female<br />
+                        </div>
+                        <!-- 會員生日 -->
+                        <div class="inf-input">
+                          <img
+                            src="images/personal-information/birthday.png"
+                            class="inf-icon"
+                          /><br />
+                          <input
+                            type="date"
+                            name="selectdate"
+                            class="inf-input-text"
+                            value="2000-05-05"
+                          /><br />
+                          <div class="inf-button-group">
+                            <!-- 確認修改按鈕 -->
+                            <input
+                              type="button"
+                              name="confirm-change"
+                              value="確認修改"
+                              class="inf-button"
+                              onclick="window.alert('資料修改完成');"
+                            />
+                            <!-- 取消按鈕 -->
+                            <input
+                              type="reset"
+                              name="cancel"
+                              value="取消"
+                              class="inf-button"
+                            /><br />
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <!-- 不可修改狀態(用input) -->
+                  <div class="row">
+                    <div class="col-12 col-md-4">
+                      <form
+                        id="user-image"
+                        class="inf-img-form"
+                        method="post"
+                        action="#"
+                      >
+                        <!-- 會員頭像 -->
+                        <img
+                          src="images/personal-information/user-inf.png"
+                          class="inf-img-user"
+                        /><br />
+                      </form>
+                      <form id="user-account-password" method="post" action="#">
+                        <!-- 帳號 -->
+                        <div class="inf-input-l">
+                          <input
+                            type="text"
+                            name="account"
+                            value="QAQ"
+                            class="inf-input-text"
+                            required
+                            readonly="readonly"
+                          /><br />
+                        </div>
+                        <!-- 密碼 -->
+                        <div class="inf-input-l">
+                          <input
+                            type="password"
+                            name="password"
+                            value="12345678"
+                            minlength="8"
+                            class="inf-input-text"
+                            required
+                            readonly="readonly"
+                          /><br />
+                        </div>
+                      </form>
+                    </div>
+                    <div class="col-12 col-md-4">
+                      <form
+                        id="ps-inf-c"
+                        class="inf-icon-form"
+                        method="post"
+                        action="#"
+                      >
+                        <!-- 會員名字 -->
+                        <div class="inf-input">
+                          <img
+                            src="images/personal-information/id-card.png"
+                            class="inf-icon"
+                          /><br />
+                          <input
+                            type="text"
+                            name="uesr-name"
+                            value="野原新之助"
+                            class="inf-input-text"
+                            required
+                            readonly="readonly"
+                          /><br />
+                        </div>
+                        <!-- 會員電話號碼 -->
+                        <div class="inf-input">
+                          <img
+                            src="images/personal-information/phone-call.png"
+                            class="inf-icon"
+                          /><br />
+                          <input
+                            type="text"
+                            name="phone-call"
+                            value=" 03-265-9999"
+                            class="inf-input-text"
+                            readonly="readonly"
+                          /><br />
+                        </div>
+                        <!-- 會員地址 -->
+                        <div class="inf-input">
+                          <img
+                            src="images/personal-information/home-address.png"
+                            class="inf-icon"
+                          /><br />
+                          <input
+                            type="text"
+                            name="address"
+                            value="桃園市中壢區中北路200號"
+                            class="inf-input-text"
+                            readonly="readonly"
+                          /><br />
+                        </div>
+                      </form>
+                    </div>
+                    <div class="col-12 col-md-4">
+                      <form
+                        id="personal-inf-r"
+                        class="inf-icon-form"
+                        method="post"
+                        action="#"
+                      >
+                        <!-- 會員信箱 -->
+                        <div class="inf-input">
+                          <img
+                            src="images/personal-information/email.png"
+                            class="inf-icon"
+                          /><br />
+                          <input
+                            type="email"
+                            value="QAQ_(＞x＜)@gmail.com"
+                            class="inf-input-text"
+                            required
+                            readonly="readonly"
+                          /><br />
+                        </div>
+                        <!-- 會員性別 -->
+                        <div class="inf-input">
+                          <img
+                            src="images/personal-information/gender.png"
+                            class="inf-icon"
+                          /><br />
+                          <input
+                            type="radio"
+                            name="gender"
+                            value="Male"
+                            checked
+                            disabled
+                          />Male
+                          <input
+                            type="radio"
+                            name="gender"
+                            value="Female"
+                            disabled
+                          />Female<br />
+                        </div>
+                        <!-- 會員生日 -->
+                        <div class="inf-input">
+                          <img
+                            src="images/personal-information/birthday.png"
+                            class="inf-icon"
+                          /><br />
+                          <input
+                            type="date"
+                            name="selectdate"
+                            class="inf-input-text"
+                            value="2000-05-05"
+                            readonly="readonly"
+                          /><br />
+                          <div class="inf-button-group">
+                            <!-- 修改按鈕 -->
+                            <input
+                              type="button"
+                              name="alter"
+                              value="修改"
+                              class="inf-button"
+                            /><br />
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </template>
+                <!-- 不可修改狀態(用label) -->
                 <div class="row">
                   <div class="col-12 col-md-4">
                     <form
@@ -695,25 +1105,14 @@
                     <form id="user-account-password" method="post" action="#">
                       <!-- 帳號 -->
                       <div class="inf-input-l">
-                        <input
-                          type="text"
-                          name="account"
-                          value="QAQ"
-                          class="inf-input-text"
-                          required
-                        /><br />
+                        <label for="">QAQ</label>
+                        <br />
                       </div>
                       <!-- 密碼 -->
-                      <div class="inf-input-l">
-                        <input
-                          type="password"
-                          name="password"
-                          value="12345678"
-                          minlength="8"
-                          class="inf-input-text"
-                          required
-                        /><br />
-                      </div>
+                      <!-- <div class="inf-input-l">
+                        <label for="">12345678</label>
+                        <br />
+                      </div> -->
                     </form>
                   </div>
                   <div class="col-12 col-md-4">
@@ -729,13 +1128,8 @@
                           src="images/personal-information/id-card.png"
                           class="inf-icon"
                         /><br />
-                        <input
-                          type="text"
-                          name="uesr-name"
-                          value="野原新之助"
-                          class="inf-input-text"
-                          required
-                        /><br />
+                        <label for="">野原新之助</label>
+                        <br />
                       </div>
                       <!-- 會員電話號碼 -->
                       <div class="inf-input">
@@ -743,12 +1137,8 @@
                           src="images/personal-information/phone-call.png"
                           class="inf-icon"
                         /><br />
-                        <input
-                          type="text"
-                          name="phone-call"
-                          value=" 03-265-9999"
-                          class="inf-input-text"
-                        /><br />
+                        <label for="">03-265-9999</label>
+                        <br />
                       </div>
                       <!-- 會員地址 -->
                       <div class="inf-input">
@@ -756,12 +1146,8 @@
                           src="images/personal-information/home-address.png"
                           class="inf-icon"
                         /><br />
-                        <input
-                          type="text"
-                          name="address"
-                          value="桃園市中壢區中北路200號"
-                          class="inf-input-text"
-                        /><br />
+                        <label for="">桃園市中壢區中北路200號</label>
+                        <br />
                       </div>
                     </form>
                   </div>
@@ -778,12 +1164,8 @@
                           src="images/personal-information/email.png"
                           class="inf-icon"
                         /><br />
-                        <input
-                          type="email"
-                          value="QAQ_(＞x＜)@gmail.com"
-                          class="inf-input-text"
-                          required
-                        /><br />
+                        <label for="">QAQ_(＞x＜)@gmail.com</label>
+                        <br />
                       </div>
                       <!-- 會員性別 -->
                       <div class="inf-input">
@@ -791,17 +1173,8 @@
                           src="images/personal-information/gender.png"
                           class="inf-icon"
                         /><br />
-                        <input
-                          type="radio"
-                          name="gender"
-                          value="Male"
-                          checked
-                        />Male
-                        <input
-                          type="radio"
-                          name="gender"
-                          value="Female"
-                        />Female<br />
+                        <label for="">Female</label>
+                        <br />
                       </div>
                       <!-- 會員生日 -->
                       <div class="inf-input">
@@ -809,19 +1182,17 @@
                           src="images/personal-information/birthday.png"
                           class="inf-icon"
                         /><br />
-                        <input
-                          type="date"
-                          name="selectdate"
-                          class="inf-input-text"
-                          value="2000-05-05"
-                        /><br />
-                        <!-- 修改按鈕 -->
-                        <input
-                          type="button"
-                          name="alter"
-                          value="修改"
-                          class="inf-button"
-                        /><br />
+                        <label for="">2000-05-05</label>
+                        <br />
+                        <div class="inf-button-group">
+                          <!-- 修改按鈕 -->
+                          <input
+                            type="button"
+                            name="alter"
+                            value="修改"
+                            class="inf-button"
+                          /><br />
+                        </div>
                       </div>
                     </form>
                   </div>

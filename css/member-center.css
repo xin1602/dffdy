@@ -260,6 +260,7 @@
 .product-part .review-item .left .rating {
   color: rgb(67, 129, 177);
 }
+
 .product-part .review-item .right {
   display: flex;
   justify-content: flex-end;

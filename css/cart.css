@@ -151,6 +151,71 @@
 .member-center .review-item .left .rating {
   color: rgb(67, 129, 177);
 }
+/* 星級 */
+.member-center .review .rating {
+  position: relative;
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: end;
+}
+.member-center .review .rating input {
+  display: none;
+}
+
+.member-center .review .rating label {
+  float: left;
+  color: rgb(165, 186, 206);
+  /* margin: 20px 0; */
+}
+
+.member-center .review .rating label::after {
+  content: "★";
+  font-size: 16px;
+  /* padding: 5px; */
+  display: inline-block;
+  line-height: 1;
+  transition: 0.3s;
+}
+
+.member-center .review .rating input:checked ~ label,
+.member-center .review .rating label:hover ~ label,
+.member-center .review .rating label:hover {
+  color: rgb(67, 129, 177);
+}
+/* 星級結束 */
+
+.member-center .bottom .text textarea {
+  resize: none;
+  height: 95px;
+  display: block;
+  width: 100%;
+  border: 1px solid #353535;
+  outline: none;
+}
+
+.member-center .bottom .text {
+  width: 100%;
+}
+.member-center .bottom .text .button-group {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-top: 5px;
+}
+.member-center .bottom .text .button-group input {
+  padding: 5px;
+  margin: 30px 0px 5px 5px;
+  border: 0;
+  width: 45px;
+  border-radius: 5px;
+  background-color: #94b2ca;
+  color: #000;
+}
+.member-center .bottom .text .button-group input:hover {
+  background-color: #6a8397;
+  color: #fff;
+}
+
 .member-center .review-item .right {
   text-align: right;
 }
@@ -158,10 +223,9 @@
   color: #999;
 }
 .member-center .review-item .bottom {
-  /* text-align: center; */
   margin: 20px 0 0 0px;
   display: flex;
-  align-items: flex-start;
+  align-items: stretch;
   justify-content: flex-start;
 }
 .member-center .review-item .bottom .product-picture img {
