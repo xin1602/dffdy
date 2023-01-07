@@ -85,3 +85,31 @@ main {
 .totop button img {
   width: 40px;
 }
+
+nav .nav-link {
+  text-align: center;
+}
+nav .dropdown-item {
+  text-align: center;
+}
+nav .d-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav .btn-outline-dark {
+  text-align: center;
+}
+
+nav .nav-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 991.5px) {
+  nav .nav-item.home-icon,
+  .nav-item.shopping-cart-icon,
+  .nav-item.user-icon {
+    padding: 20px 30px 0px 30px;
+  }
+}

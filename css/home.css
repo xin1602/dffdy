@@ -78,7 +78,7 @@
 
 /* 熱銷商品 */
 .bestseller.container {
-  max-width: 1000px;
+  max-width: 1366px;
 }
 .bestseller .row .title {
   margin: 40px 0;
@@ -102,7 +102,14 @@
   margin: auto;
   margin-bottom: 40px;
   padding: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
 }
+.bestseller .row {
+  display: flex;
+  justify-content: center;
+}
+
 .row .bestseller-item a {
   text-decoration: none;
   color: #000;
