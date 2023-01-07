@@ -28,7 +28,7 @@ main {
   position: fixed;
   bottom: 100px;
   right: 30px;
-  z-index: 1000;
+  z-index: 10000;
 }
 .totop-button {
   -webkit-touch-callout: none;
