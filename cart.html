@@ -552,7 +552,7 @@
                               <p class="product-name">白玫瑰永生花束</p>
                               一周年送給女朋友，她很喜歡&#9825;
                               <div class="button-group">
-                                <input type="button" value="修改" />
+                                <input type="button" value="編輯" />
                               </div>
                             </div>
                           </div>
@@ -585,7 +585,7 @@
                             <p class="product-name">白玫瑰永生花束</p>
                             一周年送給女朋友，她很喜歡&#9825;
                             <div class="button-group">
-                              <input type="button" value="修改" />
+                              <input type="button" value="編輯" />
                             </div>
                           </div>
                         </div>
@@ -616,7 +616,7 @@
                             </p>
                             紫玫瑰裝在玻璃裡很美！
                             <div class="button-group">
-                              <input type="button" value="修改" />
+                              <input type="button" value="編輯" />
                             </div>
                           </div>
                         </div>
@@ -645,7 +645,7 @@
                             <p class="product-name">非洲菊乾燥花束</p>
                             擺飾起來挺漂亮的！
                             <div class="button-group">
-                              <input type="button" value="修改" />
+                              <input type="button" value="編輯" />
                             </div>
                           </div>
                         </div>
@@ -674,7 +674,7 @@
                             <p class="product-name">法國白梅乾燥花卡片</p>
                             很有特色的卡片！收到覺得很滿意！
                             <div class="button-group">
-                              <input type="button" value="修改" />
+                              <input type="button" value="編輯" />
                             </div>
                           </div>
                         </div>
@@ -926,7 +926,7 @@
                       </form>
                     </div>
                   </div>
-                  <!-- 不可修改狀態(用input) -->
+                  <!-- 不可修改狀態(用label) -->
                   <div class="row">
                     <div class="col-12 col-md-4">
                       <form
@@ -944,27 +944,14 @@
                       <form id="user-account-password" method="post" action="#">
                         <!-- 帳號 -->
                         <div class="inf-input-l">
-                          <input
-                            type="text"
-                            name="account"
-                            value="QAQ"
-                            class="inf-input-text"
-                            required
-                            readonly="readonly"
-                          /><br />
+                          <label for="">QAQ</label>
+                          <br />
                         </div>
                         <!-- 密碼 -->
-                        <div class="inf-input-l">
-                          <input
-                            type="password"
-                            name="password"
-                            value="12345678"
-                            minlength="8"
-                            class="inf-input-text"
-                            required
-                            readonly="readonly"
-                          /><br />
-                        </div>
+                        <!-- <div class="inf-input-l">
+                        <label for="">12345678</label>
+                        <br />
+                      </div> -->
                       </form>
                     </div>
                     <div class="col-12 col-md-4">
@@ -980,14 +967,8 @@
                             src="images/personal-information/id-card.png"
                             class="inf-icon"
                           /><br />
-                          <input
-                            type="text"
-                            name="uesr-name"
-                            value="野原新之助"
-                            class="inf-input-text"
-                            required
-                            readonly="readonly"
-                          /><br />
+                          <label for="">野原新之助</label>
+                          <br />
                         </div>
                         <!-- 會員電話號碼 -->
                         <div class="inf-input">
@@ -995,13 +976,8 @@
                             src="images/personal-information/phone-call.png"
                             class="inf-icon"
                           /><br />
-                          <input
-                            type="text"
-                            name="phone-call"
-                            value=" 03-265-9999"
-                            class="inf-input-text"
-                            readonly="readonly"
-                          /><br />
+                          <label for="">03-265-9999</label>
+                          <br />
                         </div>
                         <!-- 會員地址 -->
                         <div class="inf-input">
@@ -1009,13 +985,8 @@
                             src="images/personal-information/home-address.png"
                             class="inf-icon"
                           /><br />
-                          <input
-                            type="text"
-                            name="address"
-                            value="桃園市中壢區中北路200號"
-                            class="inf-input-text"
-                            readonly="readonly"
-                          /><br />
+                          <label for="">桃園市中壢區中北路200號</label>
+                          <br />
                         </div>
                       </form>
                     </div>
@@ -1032,13 +1003,8 @@
                             src="images/personal-information/email.png"
                             class="inf-icon"
                           /><br />
-                          <input
-                            type="email"
-                            value="QAQ_(＞x＜)@gmail.com"
-                            class="inf-input-text"
-                            required
-                            readonly="readonly"
-                          /><br />
+                          <label for="">QAQ_(＞x＜)@gmail.com</label>
+                          <br />
                         </div>
                         <!-- 會員性別 -->
                         <div class="inf-input">
@@ -1046,19 +1012,8 @@
                             src="images/personal-information/gender.png"
                             class="inf-icon"
                           /><br />
-                          <input
-                            type="radio"
-                            name="gender"
-                            value="Male"
-                            checked
-                            disabled
-                          />Male
-                          <input
-                            type="radio"
-                            name="gender"
-                            value="Female"
-                            disabled
-                          />Female<br />
+                          <label for="">Female</label>
+                          <br />
                         </div>
                         <!-- 會員生日 -->
                         <div class="inf-input">
@@ -1066,13 +1021,8 @@
                             src="images/personal-information/birthday.png"
                             class="inf-icon"
                           /><br />
-                          <input
-                            type="date"
-                            name="selectdate"
-                            class="inf-input-text"
-                            value="2000-05-05"
-                            readonly="readonly"
-                          /><br />
+                          <label for="">2000-05-05</label>
+                          <br />
                           <div class="inf-button-group">
                             <!-- 修改按鈕 -->
                             <input
@@ -1087,7 +1037,7 @@
                     </div>
                   </div>
                 </template>
-                <!-- 不可修改狀態(用label) -->
+                <!-- 不可修改狀態(用input) -->
                 <div class="row">
                   <div class="col-12 col-md-4">
                     <form
@@ -1105,14 +1055,27 @@
                     <form id="user-account-password" method="post" action="#">
                       <!-- 帳號 -->
                       <div class="inf-input-l">
-                        <label for="">QAQ</label>
-                        <br />
+                        <input
+                          type="text"
+                          name="account"
+                          value="QAQ"
+                          class="inf-input-text"
+                          required
+                          readonly="readonly"
+                        /><br />
                       </div>
                       <!-- 密碼 -->
-                      <!-- <div class="inf-input-l">
-                        <label for="">12345678</label>
-                        <br />
-                      </div> -->
+                      <div class="inf-input-l">
+                        <input
+                          type="password"
+                          name="password"
+                          value="12345678"
+                          minlength="8"
+                          class="inf-input-text"
+                          required
+                          readonly="readonly"
+                        /><br />
+                      </div>
                     </form>
                   </div>
                   <div class="col-12 col-md-4">
@@ -1128,8 +1091,14 @@
                           src="images/personal-information/id-card.png"
                           class="inf-icon"
                         /><br />
-                        <label for="">野原新之助</label>
-                        <br />
+                        <input
+                          type="text"
+                          name="uesr-name"
+                          value="野原新之助"
+                          class="inf-input-text"
+                          required
+                          readonly="readonly"
+                        /><br />
                       </div>
                       <!-- 會員電話號碼 -->
                       <div class="inf-input">
@@ -1137,8 +1106,13 @@
                           src="images/personal-information/phone-call.png"
                           class="inf-icon"
                         /><br />
-                        <label for="">03-265-9999</label>
-                        <br />
+                        <input
+                          type="text"
+                          name="phone-call"
+                          value=" 03-265-9999"
+                          class="inf-input-text"
+                          readonly="readonly"
+                        /><br />
                       </div>
                       <!-- 會員地址 -->
                       <div class="inf-input">
@@ -1146,8 +1120,13 @@
                           src="images/personal-information/home-address.png"
                           class="inf-icon"
                         /><br />
-                        <label for="">桃園市中壢區中北路200號</label>
-                        <br />
+                        <input
+                          type="text"
+                          name="address"
+                          value="桃園市中壢區中北路200號"
+                          class="inf-input-text"
+                          readonly="readonly"
+                        /><br />
                       </div>
                     </form>
                   </div>
@@ -1164,8 +1143,13 @@
                           src="images/personal-information/email.png"
                           class="inf-icon"
                         /><br />
-                        <label for="">QAQ_(＞x＜)@gmail.com</label>
-                        <br />
+                        <input
+                          type="email"
+                          value="QAQ_(＞x＜)@gmail.com"
+                          class="inf-input-text"
+                          required
+                          readonly="readonly"
+                        /><br />
                       </div>
                       <!-- 會員性別 -->
                       <div class="inf-input">
@@ -1173,8 +1157,19 @@
                           src="images/personal-information/gender.png"
                           class="inf-icon"
                         /><br />
-                        <label for="">Female</label>
-                        <br />
+                        <input
+                          type="radio"
+                          name="gender"
+                          value="Male"
+                          checked
+                          disabled
+                        />Male
+                        <input
+                          type="radio"
+                          name="gender"
+                          value="Female"
+                          disabled
+                        />Female<br />
                       </div>
                       <!-- 會員生日 -->
                       <div class="inf-input">
@@ -1182,8 +1177,13 @@
                           src="images/personal-information/birthday.png"
                           class="inf-icon"
                         /><br />
-                        <label for="">2000-05-05</label>
-                        <br />
+                        <input
+                          type="date"
+                          name="selectdate"
+                          class="inf-input-text"
+                          value="2000-05-05"
+                          readonly="readonly"
+                        /><br />
                         <div class="inf-button-group">
                           <!-- 修改按鈕 -->
                           <input
@@ -1267,12 +1267,7 @@
                           $<span class="all-price-num">1280</span>
                         </div>
                         <!-- 刪除鍵 -->
-                        <div
-                          class="col-12 col-md-1 col-xl-1 delete"
-                          onclick="return false;"
-                        >
-                          ✖
-                        </div>
+                        <div class="col-12 col-md-1 col-xl-1 delete">✖</div>
                       </div>
                     </template>
                     <div class="row product">
@@ -1322,12 +1317,7 @@
                         $<span class="all-price-num">1280</span>
                       </div>
                       <!-- 刪除鍵 -->
-                      <div
-                        class="col-12 col-md-1 col-xl-1 delete"
-                        onclick="return false;"
-                      >
-                        ✖
-                      </div>
+                      <div class="col-12 col-md-1 col-xl-1 delete">✖</div>
                     </div>
                     <div class="row product">
                       <div class="col-4 col-md-2 col-xl-2 image">
@@ -1367,12 +1357,7 @@
                       <div class="col-6 col-md-2 col-xl-2 all-price">
                         $<span class="all-price-num">1980</span>
                       </div>
-                      <div
-                        class="col-12 col-md-1 col-xl-1 delete"
-                        onclick="return false;"
-                      >
-                        ✖
-                      </div>
+                      <div class="col-12 col-md-1 col-xl-1 delete">✖</div>
                     </div>
                     <div class="row product">
                       <div class="col-4 col-md-2 col-xl-2 image">
@@ -1412,16 +1397,15 @@
                       <div class="col-6 col-md-2 col-xl-2 all-price">
                         $<span class="all-price-num">150</span>
                       </div>
-                      <div
-                        class="col-12 col-md-1 col-xl-1 delete"
-                        onclick="return false;"
-                      >
-                        ✖
-                      </div>
+                      <div class="col-12 col-md-1 col-xl-1 delete">✖</div>
                     </div>
+
                     <!-- 合計欄位 -->
                     <div class="row count">
-                      <div class="col-12 col-md-7 col-xl-7"></div>
+                      <!--保存購物車數量  -->
+                      <div class="col-12 col-md-7 col-xl-7 save">
+                        <!-- <a class="button-next" href="#">保存購物車數量</a> -->
+                      </div>
                       <!-- 合計標題 -->
                       <div class="col-6 col-md-2 col-xl-2 total-price-text">
                         合計
