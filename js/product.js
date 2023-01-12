@@ -4,7 +4,9 @@ function addCart() {
 }
 
 // tabs
-openCity(event, "description");
+
+// openCity(event, "description");
+document.getElementById("description").style.display = "block";
 function openCity(evt, cityName) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
